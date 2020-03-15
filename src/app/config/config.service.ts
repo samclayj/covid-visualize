@@ -10,6 +10,8 @@ export class ConfigService {
   constructor(private http: HttpClient) { }
 
   getConfig() {
+    // Add retries with backoff + error handling.
+    // Also consider typing the response.
     return this.http.get(this.configUrl);
   }
 }
