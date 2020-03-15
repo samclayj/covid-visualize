@@ -5,13 +5,20 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ConfigService {
-  configUrl = 'http://localhost:5000/config/config.json';
+  configUrl = 'http://localhost:3000/config';
+  config = null;
 
   constructor(private http: HttpClient) { }
 
-  getConfig() {
+  async getConfig() {
     // Add retries with backoff + error handling.
     // Also consider typing the response.
-    return this.http.get(this.configUrl);
+    // Only load the config one time.
+    if (this.config == null) {
+      this.config = await this.http.get(this.configUrl).toPromise();
+      console.log(this.config);
+    }
+    console.log(this.config);
+    return Promise.resolve(this.config);
   }
 }
