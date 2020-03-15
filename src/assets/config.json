@@ -1,0 +1,5 @@
+{
+    "recoveredSeriesUrl": "localhost:5000/series/recovered",
+    "deathsSeriesUrl": "localhost:5000/series/deaths",
+    "confirmedSeriesUrl": "localhost:5000/series/confirmed"
+  }

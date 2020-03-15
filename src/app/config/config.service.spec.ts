@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TimeSeriesService } from './time-series.service';
+import { ConfigService } from './config.service';
 
-describe('TimeSeriesService', () => {
-  let service: TimeSeriesService;
+describe('ConfigService', () => {
+  let service: ConfigService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(TimeSeriesService);
+    service = TestBed.inject(ConfigService);
   });
 
   it('should be created', () => {
